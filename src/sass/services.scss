@@ -1,0 +1,36 @@
+.services{
+    .package{
+        margin: 20px 0;
+        color: $primary-color;
+        .name{
+            background-color: $secondary-color;
+            margin-bottom: 10px;
+            h4{
+                margin: 10px 0;
+                text-align: center;
+            }
+        }
+        .image{
+            text-align: center;
+            font-size: x-large;
+            background-color: $secondary-color;
+            margin-bottom: 10px;
+        }
+        .functions{
+            background-color: $secondary-color;
+            margin-bottom: 10px;
+            padding: 10px;
+        }
+        .price{
+            background-color: $secondary-color;
+            margin-bottom: 10px;
+            padding: 10px;
+            color: $secondary-color;
+            h4{
+                width: 100%;
+                text-align: end;
+                color: $tertiary-color;
+            }
+        }
+    }
+}

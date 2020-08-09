@@ -1,0 +1,15 @@
+.home{
+    h1{
+        position: static;
+        color: $secondary-color;
+        font-family: "Roboto";
+        font-size: 60px;
+        padding: 0;
+        span{
+            font-weight: bold;
+        }
+    }
+    p{
+        padding: 0;
+    }
+}

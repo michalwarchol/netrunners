@@ -1,0 +1,104 @@
+@import "_config.scss";
+@import "_utils.scss";
+
+@import "home.scss";
+@import "about.scss";
+@import "services.scss";
+@import "contact.scss";
+
+body{
+    @media(max-width: 768px){
+        background-color: $primary-color;
+    }
+    @media(min-width: 768px){
+        background-image: url("../img/background-small.png");
+    }
+    @media(min-width: 1140px){
+        background-image: url("../img/background.png");
+    }
+    background-size: 100% 100%;
+    color: $secondary-color;
+    padding: 0;
+    margin: 0;
+    overflow-x: hidden;
+    &::-webkit-scrollbar{
+        display: none;
+    }
+    .app{
+        .logo_text{
+            z-index: 4;
+            font-family: "Azonix";
+            position: absolute;
+            top: 0;
+            color: lighten($color: $secondary-color, $amount: 10);
+            font-size: 3vmax;
+            padding-top: 20px;
+            padding-left: 20px;
+        }
+        .main{
+            z-index: 3;
+            position: relative;
+            font-family: "Roboto";
+            height: 100vh;
+            .navbar{
+                i{
+                    font-size: 200%;
+                    z-index: 3;
+                    cursor: pointer;
+                    &:hover{
+                        background-color: $quaternary-color;
+                    }
+                }
+                .menu{
+                    position: absolute;
+                    top: 0;
+                    left: 0;
+                    width: 100%;
+                    z-index: 2;
+                    background-color: $quaternary-color;
+                    .navbar_link{
+                        background-color: $primary-color;;
+                    }
+                }
+            }
+            .navbar_link{
+                padding: 20px;
+                text-decoration: none;
+                color: $secondary-color;
+                &:hover{
+                    background-color: rgba($quaternary-color, 0.6);
+                }
+                .border_bottom{
+                    box-sizing: border-box;
+                    border-bottom: 1px solid $secondary-color;
+                }
+            }
+        }
+        .button{
+            padding: 10px;
+            background-color: $tertiary-color;
+            width: 180px;
+            text-align: center;
+            cursor: pointer;
+            transition: background-color ease-in 0.2s;
+            &:hover{
+                background-color: darken($color: $tertiary-color, $amount: 10);
+            }
+            span{
+                padding: 10px;
+            }
+        }
+        .arrowsdown{
+            font-size: 300%;
+            margin-top: 50px;
+            .arrowsinner{
+                margin-bottom: 30px;
+                cursor: pointer;
+                i{
+                    margin-top: -25px;
+                    margin-bottom: -25px;
+                }
+            }
+        }
+    }
+}

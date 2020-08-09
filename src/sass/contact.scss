@@ -1,0 +1,88 @@
+.contact{
+    .form{
+        margin-top:20px;
+        h3{
+            span{
+                font-weight: bold;
+            }
+        }
+        .input{
+            width: 100%;
+            margin-top: 10px;
+        }
+        .inp{
+            position: relative;
+            margin: auto;
+            width: 100%;
+            border-radius: 3px;
+            overflow: hidden;
+        }
+        .label{
+            width: 100%;
+            position: absolute;
+            top: 20px;
+            left: 12px;
+            font-size: 16px;
+            color: rgba($secondary-color,.8);
+            font-weight: 500;
+            transform-origin: 0 0;
+            transform: translate3d(0,0,0);
+            transition: all .2s ease;
+            pointer-events: none;
+        }
+        .focus-bg{
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba($primary-color,.05);
+            z-index: -1;
+            transform: scaleX(0);
+            transform-origin: left;
+        }
+        input, textarea{
+            -webkit-appearance: none;
+            appearance: none;
+            width: 100%;
+            border: 0;
+            font-size: 120%;
+            font-family: inherit;
+            padding: 16px 12px 0 12px;
+            height: 56px;
+            font-weight: 400;
+            background: rgba($quaternary-color,.1);
+            box-shadow: inset 0 -1px 0 rgba($quaternary-color,.3);
+            color: $secondary-color;
+            transition: all .15s ease;
+            &:hover{
+                background: rgba($quaternary-color,.04);
+                box-shadow: inset 0 -1px 0 rgba($quaternary-color,.5);
+            }
+            &:not(:placeholder-shown){
+                + .label{
+                    color: rgba($secondary-color,.8);
+                    transform: translate3d(0,-16px,0) scale(.75);
+                }
+            }
+            &:focus{
+                background: rgba($quaternary-color,.05);
+                outline: none;
+                box-shadow: inset 0 -2px 0 $tertiary-color;
+                + .label{
+                    color: $tertiary-color;
+                    transform: translate3d(0,-16px,0) scale(.75);
+                    + .focus-bg{
+                        transform: scaleX(1);
+                        transition: all .1s ease;
+                    }
+                }
+            }
+        }
+        textarea{
+            resize: none;
+            height: 200px;
+        }
+
+    }
+}

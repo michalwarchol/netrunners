@@ -1,0 +1,73 @@
+.about{
+    .info{
+        h1{
+            position: static;
+            color: $secondary-color;
+            font-family: "Roboto";
+            font-size: 60px;
+            padding: 0;
+            span{
+                font-weight: bold;
+            }
+        }
+    }
+    .features{
+        margin-top: 40px;
+        .feature{
+            color: $primary-color;
+            @media(max-width: 768px){
+                font-size: x-small;
+            }
+            @media(min-width: 768px){
+                font-size: 100%;
+            }
+            &:nth-child(1){
+                h3{
+                    background-color: $secondary-color;
+                    color: $tertiary-color;
+                }
+                .triangle{
+                    width: 0;
+                    height: 0;
+                    border-top: 60px solid transparent;
+                    border-bottom: 0px solid transparent;
+                    border-left: 60px solid $secondary-color;
+                    margin-right: 120px;
+                }
+            }
+            &:nth-child(2){
+                h3{
+                    background-color: $quaternary-color;
+                    color: $secondary-color;
+                }
+                .triangle{
+                    width: 0;
+                    height: 0;
+                    border-top: 60px solid transparent;
+                    border-bottom: 0px solid transparent;
+                    border-left: 60px solid $quaternary-color;
+                    margin-right: 60px;
+                }
+            }
+            &:nth-child(3){
+                h3{
+                    background-color: $tertiary-color;
+                    color: $quaternary-color;
+                }
+                .triangle{
+                    width: 0;
+                    height: 0;
+                    border-top: 60px solid transparent;
+                    border-bottom: 0px solid transparent;
+                    border-left: 60px solid $tertiary-color;
+                }
+            }
+            h3{
+                padding: 10px;
+                margin: 0;
+                font-size: 200%;
+                font-family: "Azonix";
+            }
+        }
+    }
+}
