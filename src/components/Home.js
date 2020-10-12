@@ -1,4 +1,5 @@
 import React from 'react'
+import {Link} from "react-router-dom"
 import Button from "./Button"
 import {motion} from "framer-motion"
 
@@ -18,7 +19,7 @@ const Home = () => {
         exit="exit">
             <h1>We Run <span>The Net</span></h1>
             <p className="col-12 col-md-6">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris et felis vitae justo mollis egestas vitae et nulla. Duis non diam vitae lacus dignissim hendrerit. Ut eget metus at ligula venenatis varius et eu dui. In ut eros bibendum, auctor ex ornare, dignissim ante. Nulla eget vehicula turpis. </p>
-            <Button text="Get Started" handleClick={()=>console.log("elo")} />
+            <Link to="/About"><Button text="Get Started" /></Link>
         </motion.div>
     )
 }

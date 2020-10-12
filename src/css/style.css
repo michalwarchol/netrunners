@@ -283,11 +283,16 @@ body .app .main .navbar_link .border_bottom {
   box-sizing: border-box;
   border-bottom: 1px solid #eeeeee;
 }
+body .app a {
+  text-decoration: none;
+}
 body .app .button {
   padding: 10px;
   background-color: #00adb5;
   width: 180px;
   text-align: center;
+  text-decoration: none;
+  color: white;
   cursor: pointer;
   transition: background-color ease-in 0.2s;
 }
